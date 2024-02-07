@@ -1,4 +1,4 @@
-package com.example.onlineshop.ui.screens
+package com.example.onlineshopwb.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -32,9 +32,9 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.onlineshop.ui.screens.components.PhoneField
 import com.example.onlineshop.ui.screens.components.TopAppBarSample
-import com.example.onlineshop.ui.theme.OnlineShopTheme
-import com.example.onlineshop.ui.valid.checkRussianLetters
-import com.example.onlineshop.ui.viewModels.ViewModelReg
+import com.example.onlineshopwb.ui.valid.checkRussianLetters
+import com.example.onlineshopwb.viewModels.ViewModelReg
+import com.example.onlineshopwb.ui.theme.OnlineShopWBTheme
 
 
 @OptIn(ExperimentalComposeUiApi::class)
@@ -66,7 +66,7 @@ fun RegistrationScreen(viewModelDB: ViewModelReg = viewModel(factory = ViewModel
     }
 
 
-    OnlineShopTheme {
+    OnlineShopWBTheme {
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -179,7 +179,7 @@ fun RegistrationScreen(viewModelDB: ViewModelReg = viewModel(factory = ViewModel
                 onPhoneChanged = { viewModelDB.newPhoneNumber.value = it })
 
             Button(
-                onClick = { viewModelDB.insertUser() },
+                onClick = { viewModelDB.insertUser() },///////////
                 enabled = (!isNameError && viewModelDB.newName.value.isNotEmpty() && !isSurnameError && viewModelDB.newSurname.value.isNotEmpty()) && viewModelDB.newPhoneNumber.value.length == 10
             ) {
                 Text("Войти")

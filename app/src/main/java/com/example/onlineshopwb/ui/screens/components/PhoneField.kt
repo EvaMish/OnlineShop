@@ -18,7 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import com.example.onlineshop.ui.valid.PhoneVisualTransformation
+import com.example.onlineshopwb.ui.valid.PhoneVisualTransformation
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable

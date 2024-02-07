@@ -1,4 +1,4 @@
-package com.example.onlineshop.ui.valid
+package com.example.onlineshopwb.ui.valid
 
 fun checkRussianLetters(input: String): Boolean {
     for (char in input) {

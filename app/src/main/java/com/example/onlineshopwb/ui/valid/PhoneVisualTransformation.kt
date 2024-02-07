@@ -1,4 +1,4 @@
-package com.example.onlineshop.ui.valid
+package com.example.onlineshopwb.ui.valid
 
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.buildAnnotatedString

@@ -1,4 +1,4 @@
-package com.example.onlineshop.ui.theme
+package com.example.onlineshopwb.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -39,7 +39,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun OnlineShopTheme(
+fun OnlineShopWBTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {

@@ -1,4 +1,4 @@
-package com.example.onlineshop.ui.viewModels
+package com.example.onlineshopwb.viewModels
 
 
 import androidx.compose.runtime.mutableStateOf
@@ -6,9 +6,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
-import com.example.onlineshop.data.db.App
-import com.example.onlineshop.data.db.AppDB
-import com.example.onlineshop.data.db.User
+import com.example.onlineshopwb.db.AppDB
+import com.example.onlineshopwb.db.Users
+import com.example.onlineshopwb.App
 import kotlinx.coroutines.launch
 
 class ViewModelReg(private val database: AppDB) : ViewModel() {
@@ -18,13 +18,14 @@ class ViewModelReg(private val database: AppDB) : ViewModel() {
 
     fun insertUser() = viewModelScope.launch {
         val user =
-            User(
+            Users(
                 userName = newName.value,
                 userSurname = newSurname.value,
                 userPhoneNumber = newPhoneNumber.value
             )
 
         database.dao.insertUser(user)
+        newName.value = "done"
     }
 
 

@@ -1,13 +1,13 @@
-package com.example.onlineshop.data.db
+package com.example.onlineshopwb.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [Users::class], version = 1)
 abstract class AppDB : RoomDatabase() {
-    abstract val dao: Dao
+    abstract val dao: UserDao
 
     companion object {
         fun createDataBase(context: Context): AppDB {
